@@ -1,0 +1,165 @@
+:root {
+    padding: 0;
+    margin: 0;
+    --h1-font-size : 1.5rem;
+    --regular-font-size : 1.2rem;
+    font-family: 'Actor';
+    --color-before: rgb(216, 151, 12);
+    --color-after: rgb(248, 182, 39);
+    --color-active: rgb(248, 203, 107);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    padding: 0;
+    margin: 0;
+}
+
+.headContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+/* left side, image */
+
+.imageContainer {
+    position: relative;
+}
+
+.backgroundPhoto {
+    position: absolute;
+    width: 40vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+}
+
+.imageTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 40vw;
+    top: 10vh;
+    color: white;
+    background-color: rgba(216, 151, 12, 0.664);
+    gap: 50px;
+}
+
+.h1-Image {
+    font-size: 3rem;
+    pad: 10px 0;
+    margin: 0;
+}
+
+/* right side, form */
+
+.formContainer {
+    position: absolute;
+    left: 40vw;
+    width: 60vw;
+    height: 100vh;
+    background-color: rgb(230, 230, 230);
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    max-width: 60vw;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+}
+
+.fieldBorder {
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(53, 51, 51);
+    background-color: #ffffff;
+    width: 59.7vw;
+    box-shadow: 5px 10px 10px wheat;
+    overflow: hidden;
+}
+
+.names, .email-phone, .passwords {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 1rem;
+}
+
+.fname, .lname, .email, .phone, .firstPassword, .secondPassword {
+    display: flex;
+    flex-direction: column;
+    max-width: 20vw;
+}
+
+input {
+    border-radius: 5px;
+    border: 3px solid #ccc;
+    font-size: 18px;
+    outline: none;
+}
+
+input:focus {
+    border: 3px solid #f10101;
+    box-shadow: 3px 3px 3px rgb(49, 47, 47);
+}
+
+
+.h1-Form {
+    max-width: 40vw;
+    margin-left: 5vw;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    font-size: var(--h1-font-size);
+}
+
+.h2-Form {
+    margin-left: 5vw;
+}
+
+
+#btnAccount {
+    margin-left: 5vw;
+    margin-top: 2.5vw;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid var(--color-before);
+    font-size: 18px;
+    color: white;
+    background-color: var(--color-before);
+}
+
+#btnAccount:hover {
+    border: 1px solid var(--color-after);
+    background-color: var(--color-after);
+    transition: 0.7s;
+}
+
+#btnAccount:active {
+    border: 1px solid var(--color-active);
+    background-color: var(--color-active);
+    color: black;
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5vw;
+    gap: 5px;
+    font-size: var(--regular-font-size);
+}
+
+.login-link {
+    text-decoration: none;
+    color: var(--color-before);
+}
