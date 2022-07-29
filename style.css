@@ -3,10 +3,12 @@
     margin: 0;
     --h1-font-size : 1.5rem;
     --regular-font-size : 1.2rem;
+    --error-font-size: 0.8rem;
     font-family: 'Actor';
     --color-before: rgb(216, 151, 12);
     --color-after: rgb(248, 182, 39);
     --color-active: rgb(248, 203, 107);
+    --color-red: rgb(233, 8, 8);
 }
 
 body {
@@ -89,6 +91,7 @@ img {
     overflow: hidden;
 }
 
+
 .names, .email-phone, .passwords {
     display: flex;
     gap: 3rem;
@@ -98,18 +101,32 @@ img {
 .fname, .lname, .email, .phone, .firstPassword, .secondPassword {
     display: flex;
     flex-direction: column;
-    max-width: 20vw;
+    max-width: 14vw;
+}
+
+.paraPwdOne, .paraFirstName, .paraLastName, .paraEmail, .paraPhone {
+    max-width: 15rem;
+    font-size: var(--error-font-size);
+    color: var(--color-red);
+    margin: 0;
 }
 
 input {
     border-radius: 5px;
-    border: 3px solid #ccc;
+    border: 1px solid #ccc;
     font-size: 18px;
     outline: none;
 }
 
+input:valid {
+    border: 1px solid rgb(0, 128, 6);
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border: 1px solid var(--color-red);
+}
+
 input:focus {
-    border: 3px solid #f10101;
     box-shadow: 3px 3px 3px rgb(49, 47, 47);
 }
 
